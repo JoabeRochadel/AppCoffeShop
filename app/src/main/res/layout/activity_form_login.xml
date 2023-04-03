@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".form_login">
+    tools:context=".FormLogin">
 
     <ImageView
         android:id="@+id/logo"
@@ -27,6 +34,7 @@
         android:id="@+id/edit_email"
         style="@style/Edit_Text"
         android:drawableRight="@drawable/ic_email"
+        android:inputType="textEmailAddress"
         android:hint="Email"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
@@ -36,6 +44,7 @@
         android:id="@+id/edit_senha"
         style="@style/Edit_Text"
         android:drawableRight="@drawable/ic_eye"
+        android:inputType="numberPassword"
         android:hint="Senha"
         app:layout_constraintEnd_toEndOf="@id/containerComponents"
         app:layout_constraintStart_toStartOf="@id/containerComponents"
@@ -54,6 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/white"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,3 +86,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
