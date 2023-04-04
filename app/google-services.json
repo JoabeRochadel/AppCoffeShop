@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1020157385538",
+    "project_id": "projeto-firebase-91296",
+    "storage_bucket": "projeto-firebase-91296.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020157385538:android:6cf96afe26a3f8161706db",
+        "android_client_info": {
+          "package_name": "devandroid.joabe.projetofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020157385538-ufltb74kt4svgqufm0tcslgajocqghec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhYJeuonYyR4vvSutDOlboxTfaexP11UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020157385538-ufltb74kt4svgqufm0tcslgajocqghec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
