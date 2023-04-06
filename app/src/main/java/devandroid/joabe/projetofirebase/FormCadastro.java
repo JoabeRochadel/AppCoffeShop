@@ -15,6 +15,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthEmailException;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
@@ -46,15 +47,6 @@ public class FormCadastro extends AppCompatActivity {
 
                     snackbar.show();
 
-                    if (nome.isEmpty()) {
-                        edit_nome.setError("*Obrigatório");
-                    } else if (email.isEmpty()) {
-                        edit_nome.setError("*Obrigatório");
-                    }
-                    if (senha.isEmpty()) {
-                        edit_nome.setError("*Obrigatório");
-                    }
-
                 } else {
                     CadastrarUsuario(email, senha, v);
                 }
@@ -81,12 +73,18 @@ public class FormCadastro extends AppCompatActivity {
                     }catch (FirebaseAuthWeakPasswordException e){
                         erro = "Digite uma senha com no mínimo de 6 caracteres";
                     }catch (FirebaseAuthUserCollisionException e){
-                        erro = "Digite uma senha com no mínimo de 6 caracteres";
+                        erro = "Essa conta já foi cadastrada";
+                    }catch (FirebaseAuthInvalidCredentialsException e){
+                        erro = "Email inválido!";
                     }
-
                     catch (Exception e){
-
+                        erro = "Erro ao cadastrar usuário!";
                     }
+
+                    Snackbar snackbar = Snackbar.make(v, erro, Snackbar.LENGTH_LONG);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
                 }
             }
         });
